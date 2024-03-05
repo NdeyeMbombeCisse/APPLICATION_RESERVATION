@@ -47,8 +47,8 @@
                     <td><?php echo $row['destination']?></td>
                     <td><?php echo $row['date_reservation']?></td>
                     <td><?php echo $row['heure_reservation']?></td>
-                    <td><a href="edit.php?id=<?php echo $row['id'] ?>" class="modifier"><p>Modifier</p></a></td>
-                    <td><a href="edit.php?id=<?php echo $row['id'] ?>" class="supp">supprimer</a></td>
+                    <td><a href="modifier_billet.php?id=<?php echo $row['id'] ?>" class="modifier"><p>Modifier</p></a></td>
+                    <td><a href="sup_billet.php?id=<?php echo $row['id'] ?>" class="supp">supprimer</a></td>
                 </tr> 
                 <?php
                 }?>
