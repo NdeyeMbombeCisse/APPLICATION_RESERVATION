@@ -19,16 +19,16 @@
 
     </nav>
   </header> 
-  <h1>LISTE DES BILLETS</h1>
+  <h1>LISTE DES CLIENTS</h1>
     <table>
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">PRIX</th>
-                <th scope="col">STATUT</th>
+                <th scope="col">NOM</th>
+                <th scope="col">PRENOM</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">MOT DE PASS</th>
                 <th scope="col">DESTINATION</th>
-                <th scope="col">DATE RESERVATION</th>
-                <th scope="col">HEURE RESERVATION</th>
                 <th scope="col">MODIFIER</th>
                 <th scope="col">SUPPRIMER</th>
                 
@@ -38,19 +38,19 @@
         <tbody>
             <?php
                 include_once "connexion.php";
-                $sql="SELECT * FROM billet";
+                $sql="SELECT * FROM client";
                 $result=mysqli_query($link,$sql);
                 while ($row =mysqli_fetch_assoc($result)){
             ?> 
                 <tr>
-                    <td><?php echo $row['id']?></td>
-                    <td><?php echo $row['prix']?></td>
-                    <td><?php echo $row['statut']?></td>
+                <td><?php echo $row['id']?></td>
+                    <td><?php echo $row['nom']?></td>
+                    <td><?php echo $row['prenom']?></td>
+                    <td><?php echo $row['email']?></td>
+                    <td><?php echo $row['mot_de_pass']?></td>
                     <td><?php echo $row['destination']?></td>
-                    <td><?php echo $row['date_reservation']?></td>
-                    <td><?php echo $row['heure_reservation']?></td>
-                    <td><a href="modifier_billet.php?id=<?php echo $row['id'] ?>" class="modifier"><p>Modifier</p></a></td>
-                    <td><a href="sup_billet.php?id=<?php echo $row['id'] ?>" class="supp">supprimer</a></td>
+                    <td><a href="modify_client.php?id=<?php echo $row['id'] ?>" class="modifier"><p>Modifier</p></a></td>
+                    <td><a href="sup_client.php?id=<?php echo $row['id'] ?>" class="supp">supprimer</a></td>
                 </tr> 
                 <?php
                 }?>

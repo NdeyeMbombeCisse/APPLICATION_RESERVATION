@@ -2,14 +2,14 @@
 include_once "connexion.php";
 if(isset($_POST['soumetre'])){
 
-    $prix=$_POST['prix'];
-    $statut=$_POST['statut'];
-    $destination=$_POST['destination'];
-    $date=$_POST['date_reservation'];
-    $heure=$_POST['heure_reservation']; 
+    $nom=$_POST['nom'];
+    $prenom=$_POST['prenom'];
+    $emal=$_POST['email'];
+    $mot_de_pass=$_POST['mot_de_pass'];
+    $destination=$_POST['destination']; 
 
 
-    $sql="INSERT INTO billet (prix,statut,destination,date_reservation,heure_reservation) VALUES('$prix','$statut','$destination','$date','$heure')";
+    $sql="INSERT INTO client (nom,prenom,email,mot_de_pass,destination) VALUES('$nom','$prenom','$email','$mot_de_pass','$destination')";
 
 
     $resultat=mysqli_query($link,$sql);
@@ -65,13 +65,23 @@ if(isset($_POST['soumetre'])){
      <fieldset> 
             
         <div class="remplir_formulaire">
-            <label for="prix">quelle est le prix du billet</label>
-            <input type="number" name="prix">
+            <label for="nom">quelle est le nom du client</label>
+            <input type="text" name="nom">
         </div>
         <div class= "remplir_formulaire">
-            <label for="statut">quelle est le statut du billet?</label>
-            <input type="text" name="statut">
+            <label for="prenom">quelle est le prenom du client?</label>
+            <input type="text" name="prenom">
             
+        </div>
+
+        <div class="remplir_formulaire">
+            <label for="email">Quelle est l'email du client</label>
+            <input type="text" name="email">
+        </div>
+
+        <div class="remplir_formulaire">
+            <label for="mot_de_pass">entrer le mot de pass?</label>
+            <input type="password" name="mot_de_pass">
         </div>
 
         <div class="remplir_formulaire">
@@ -80,14 +90,8 @@ if(isset($_POST['soumetre'])){
         </div>
         <div>
         
-        <div class="remplir_formulaire">
-            <label for="date_reservation">Quelle est al date de reservation?</label>
-            <input type="date" name="date_reservation">
-        </div>
-        <div class="remplir_formulaire">
-            <label for="heure_rservation">Quelle est l'heure de la reservation?</label>
-            <input type="time" name="heure_reservation">
-        </div>
+        
+        
         
        
 

@@ -28,12 +28,6 @@ if(isset($_POST['soumetre'])){
     }
 
  }
-
-
-
-
-
-
 ?>
 
 
@@ -54,7 +48,9 @@ if(isset($_POST['soumetre'])){
     </div>
     <nav>
         <a href="billet.php">ADD BILLET</a>
-        <a href="list_billet.php">LIST_BILLET</a> 
+        <a href="list_billet.php">LIST_BILLET</a>
+        <a href="client.php">ADD CLIENT</a>
+        <a href="list_client.php">LIST_CLIENT</a> 
 
     </nav>
   </header> 
