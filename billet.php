@@ -16,7 +16,7 @@ if(isset($_POST['soumetre'])){
 
 
     if($resultat){
-        header("location : index.php ? msg=New record created successefully");
+        header("location : list_billet.php ? msg=New record created successefully");
 
 
     }else{
@@ -27,15 +27,7 @@ if(isset($_POST['soumetre'])){
 
  }
 
-
-
-
-
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">

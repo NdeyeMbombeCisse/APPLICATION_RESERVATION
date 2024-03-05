@@ -58,7 +58,7 @@ if(isset($_POST['soumetre'])){
 
     </nav>
   </header> 
-  <h1>AJOUT DE BILLET</h1>
+  <h1>AJOUT DE CLIENT</h1>
 
   <form action="" method="post">
   <img src="reservation.png" alt="">
